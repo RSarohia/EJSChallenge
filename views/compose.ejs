@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog HomePage</title>
+</head>
+<header>
+    <%- include('partials/header'); -%>
+</header>
+<div class="container">
+    <h1>Compose</h1>
+    <form action="/compose" class="form-group" method="POST">    
+        <div class="form-group">
+        <label for="">Title</label>
+        <input class="form-control" type="text" name="postTitle" placeholder="Title" autocomplete="off">
+        </div>
+        <div class="form-group">
+        <label for="">Post</label>
+        <textarea class="form-control" type="text" name="postBody" placeholder="Enter Post Content" rows="4" autocomplete="off"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Publish</button>
+    </form>
+</div>
+<footer>
+    <%- include('partials/footer'); -%>
+</footer>
+</html>
